@@ -36,6 +36,7 @@
         margin-bottom: 30px; /* Adds spacing before the form */
       }
 
+      /* Circle Shape */
       .circle {
         width: 100px;
         height: 100px;
@@ -45,6 +46,7 @@
         grid-row: 2 / 3;
       }
       
+      /* Oval Shape */
       .oval {
         width: 140px;
         height: 80px;
@@ -54,6 +56,7 @@
         grid-row: 1 / 2;
       }
 
+      /* Triange Shape */
       .triangle {
         width: 0;
         height: 0;
@@ -66,6 +69,7 @@
         justify-self: center;
       }
 
+      /* Rectangle Shape */
       .rectangle {
         width: 120px;
         height: 60px;
@@ -74,6 +78,7 @@
         grid-row: 2 / 3;
       }
 
+      /* Form Shape */
       .art-form {
         text-align: center;
         background: #fff;
@@ -113,10 +118,58 @@
       h3 {
         color: #656461;
       }
-    </style>
-  </head>
 
-  <body>
+      /* Screen Sizes */
+    body {
+    font-size: 18px;
+    max-width: 1680px;
+    margin: auto;
+    }
+
+    /* Tablet (iPad: 1024x768) */
+    @media screen and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+    }
+
+    /* Mobile (480x320 and smaller) */
+    @media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 5px;
+    }
+    }
+
+    </style>
+    </head>
+
+    <body>
 
     <h1>The Art of Pierre Escargot</h1>
     <h3>"Shades of Black"</h3>
