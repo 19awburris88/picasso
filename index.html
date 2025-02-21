@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms Demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .art {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        gap: 15px;
+        width: 80vw;
+        background: black;
+        border-radius: 30px;
+        border-style: dotted;
+        border-color: white;
+        padding: 20px;
+        margin-bottom: 30px; /* Adds spacing before the form */
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        background: #5b56517d;
+        border-radius: 50%;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+      
+      .oval {
+        width: 140px;
+        height: 80px;
+        background: #656461;
+        border-radius: 50%;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+
+      .triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid rgba(144, 140, 140, 0.394);
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        align-self: center;
+        justify-self: center;
+      }
+
+      .rectangle {
+        width: 120px;
+        height: 60px;
+        background: #2a9d8f;
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+      }
+
+      .art-form {
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        width: 60vw;
+        max-width: 600px;
+        color: white;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:#656461
+      }
+
+      label, input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: #2a9d8f;
+        color: white;
+        padding: 10px;
+        width: 150px;
+      }
+      h1 {
+        color: #656461;
+      }
+      h2 {
+        color: black;
+      }
+      h3 {
+        color: #656461;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>The Art of Pierre Escargot</h1>
+    <h3>"Shades of Black"</h3>
+    <br>
+
+    <div class="art">
+      <div class="circle"></div>
+      <div class="oval"></div>
+      <div class="triangle"></div>
+      <div class="rectangle"></div>
+    </div>
+
+    <div class="art-form">
+      <h2>Interested in More Art?</h2>
+      <br>
+      <form>
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" id="fname" />
+        
+        <label for="lname">Last name:</label>
+        <input type="text" name="lname" id="lname" />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
+
+
